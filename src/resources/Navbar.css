@@ -1,0 +1,22 @@
+nav {
+  height: 60px;
+  width: 100%;
+  background-color: rgb(255,0,0);
+  position: relative;
+}
+
+.burger-menu {
+  display: flex;
+}
+.large-menu {
+  display: none;
+}
+
+@media only screen and (min-width: 640px) {
+  .burger-menu {
+    display: none;
+  }
+  .large-menu {
+    display: flex;
+  }
+}  
