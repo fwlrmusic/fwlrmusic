@@ -40,7 +40,9 @@ const Navbar = () => {
             menuItems
           )
         }
-        <div className='burger-menu-click' onClick={toggleMenu} />
+        <div className='burger-menu-click-container'>
+          <div className='burger-menu-click' onClick={toggleMenu} />
+        </div>
       </div>
     )
   }
