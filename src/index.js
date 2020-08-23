@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './App.css'
+import Navbar from './navbar'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function App () {
+  return (
+    <div className='App'>
+      <Navbar />
+      <div className='page-content'>
+        <div className='landing-container'>
+          <h1>Landing Page</h1>
+          <div className='landing-image'>
+            <img
+              src='https://res.cloudinary.com/dtweazqf2/image/upload/v1598215517/fwlr_landing_m8osmn.png'
+              alt='Producer Nick Fowler poses atop his Talon car'
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App />, document.getElementById('root'))
