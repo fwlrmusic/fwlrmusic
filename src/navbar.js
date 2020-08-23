@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './resources/Navbar.css'
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   const menuItems = (
     <ul>
       <li>
@@ -26,11 +32,18 @@ const Navbar = () => {
       </li>
     </ul>
   )
-  const burgerMenu = (
-    <div className='burger-menu'>
-      {menuItems}
-    </div>
-  )
+  const burgerMenu = () => {
+    return (
+      <div className='burger-menu'>
+        {
+          isMenuOpen && (
+            menuItems
+          )
+        }
+        <div className='burger-menu-click' onClick={toggleMenu} />
+      </div>
+    )
+  }
   const largeMenu = (
     <div className='large-menu'>
       {menuItems}
@@ -38,7 +51,7 @@ const Navbar = () => {
   )
   return (
     <nav>
-      {burgerMenu}
+      {burgerMenu()}
       {largeMenu}
     </nav>
   )

@@ -1,22 +1,78 @@
 nav {
+  position: fixed;
+  z-index: 2;
   height: 60px;
   width: 100%;
   background-color: rgb(255,0,0);
-  position: relative;
+}
+
+.burger-menu a, .large-menu a {
+  text-decoration: none;
+  color: rgb(0,0,0);
+  white-space: nowrap;
 }
 
 .burger-menu {
   display: flex;
+  justify-content: flex-end;
 }
+
+.burger-menu-click {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(0,0,255);
+}
+
+.burger-menu ul {
+  height: min-content;
+  width: min-content;
+}
+
+.burger-menu ul li {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(255,255,255);
+  border-top-width: 0px;
+  background-color: rgb(0,0,255);
+  padding: 0 10px;
+}
+
 .large-menu {
   display: none;
+  height: 100%;
+  background-color: rgb(0,0,255);
+}
+
+.large-menu ul {
+  display: flex;
+  height: 100%;
+  width: min-content;
+}
+
+.large-menu ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: min-content;
+  background-color: rgb(200,200,200);
+  border-left: 1px solid rgb(255,255,255);
+  padding: 0px 10px;
+}
+
+.large-menu ul li:nth-child(1) {
+  border-left: none;
 }
 
 @media only screen and (min-width: 640px) {
   .burger-menu {
     display: none;
   }
+
   .large-menu {
     display: flex;
+    justify-content: center;
   }
 }  
