@@ -3,33 +3,48 @@ nav {
   z-index: 2;
   height: 60px;
   width: 100%;
-  background-color: rgb(255,0,0);
+  background-color: var(--main-color);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .burger-menu a, .large-menu a {
   text-decoration: none;
-  color: rgb(0,0,0);
+  color: var(--main-text);
   white-space: nowrap;
 }
 
 .burger-menu {
+  position: relative;
   display: flex;
   justify-content: flex-end;
+}
+
+.burger-menu img {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%,0);
+  height: 40px;
 }
 
 .burger-menu-click {
   height: 60px;
   width: 60px;
-  background-color: rgb(0,255,0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
+.burger-menu-click:active {
+  background-color: var(--main-active);
 }
 
 .burger-menu ul {
   height: min-content;
   width: min-content;
   margin-right: -60px;
-  background-color: rgb(0,0,255);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  background-color: var(--main-color);
 }
 
 .burger-menu ul li {
@@ -37,20 +52,24 @@ nav {
   height: 60px;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgb(255,255,255);
-  background-color: rgb(0,0,255);
-  padding: 0 10px;
+  border-top: 1px solid var(--main-border);
+  background-color: var(--main-color);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 0 20px;
+}
+
+.burger-menu ul li:active {
+  background-color: var(--main-active);
 }
 
 .burger-menu ul li:nth-child(1) {
   margin-top: 60px;
-  border-top: none;
 }
 
 .large-menu {
   display: none;
   height: 100%;
-  background-color: rgb(0,0,255);
+  background-color: var(--main-color);
 }
 
 .large-menu ul {
@@ -65,9 +84,9 @@ nav {
   align-items: center;
   height: 100%;
   width: min-content;
-  background-color: rgb(200,200,200);
-  border-left: 1px solid rgb(255,255,255);
-  padding: 0px 10px;
+  background-color: var(--main-color);
+  border-left: 1px solid var(--main-border);
+  padding: 0px 20px;
 }
 
 .large-menu ul li:nth-child(1) {
