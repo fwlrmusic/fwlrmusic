@@ -1,0 +1,39 @@
+.landing-container {
+  height: 100%;
+  width: 100%;
+}
+
+.landing-container .landing-image {
+  display: flex;
+  width: 100%;
+  height: min-content;
+  justify-content: center;
+}
+
+.landing-container .landing-image img {
+  height: auto;
+  width: 100%;
+}
+
+.landing-container .landing-logo {
+  display: none;
+  width: 100%;
+  height: min-content;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.landing-container .landing-logo img {
+  height: 100px;
+}
+
+@media only screen and (min-width: 640px) {
+  .landing-container .landing-image img {
+    height: 400px;
+    width: auto;
+  }
+
+  .landing-container .landing-logo {
+    display: flex;
+  }
+}

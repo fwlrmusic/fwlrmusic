@@ -1,24 +1,40 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './App.css'
-import Navbar from './navbar'
+import './resources/App.css'
+import Navbar from './Navbar'
+import GrandPrix from './GrandPrix'
+import PitCrew from './PitCrew'
+import Contact from './Contact'
+import Landing from './Landing'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
 
 function App () {
   return (
-    <div className='App'>
-      <Navbar />
-      <div className='page-content'>
-        <div className='landing-container'>
-          <h1>Landing Page</h1>
-          <div className='landing-image'>
-            <img
-              src='https://res.cloudinary.com/dtweazqf2/image/upload/v1598215517/fwlr_landing_m8osmn.png'
-              alt='Producer Nick Fowler poses atop his Talon car'
-            />
-          </div>
+    <Router>
+      <div className='App'>
+        <Navbar />
+        <div className='page-content'>
+          <Switch>
+            <Route path='/grand-prix'>
+              <GrandPrix />
+            </Route>
+            <Route path='/pit-crew'>
+              <PitCrew />
+            </Route>
+            <Route path='/contact'>
+              <Contact />
+            </Route>
+            <Route path='/'>
+              <Landing />
+            </Route>
+          </Switch>
         </div>
       </div>
-    </div>
+    </Router>
   )
 }
 
