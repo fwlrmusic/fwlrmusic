@@ -12,7 +12,7 @@
 
 .landing-container .landing-image img {
   height: auto;
-  width: 100%;
+  width: 100vw;
 }
 
 .landing-container .landing-logo {
