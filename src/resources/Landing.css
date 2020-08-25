@@ -1,6 +1,7 @@
 .landing-container {
   height: 100%;
   width: 100%;
+  background-color: var(--main-color);
 }
 
 .landing-container .landing-image {
