@@ -2,7 +2,6 @@ import React from 'react'
 import './resources/Landing.css'
 import { FaDiscord, FaSoundcloud, FaInstagram, FaYoutube, FaTwitter, FaFacebookF, FaSnapchatGhost } from 'react-icons/fa'
 import { RiSpotifyLine } from 'react-icons/ri'
-import { Link } from 'react-router-dom'
 
 const Landing = () => {
   return (

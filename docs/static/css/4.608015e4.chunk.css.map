@@ -1,0 +1,1 @@
+{"version":3,"sources":["GrandPrix.css"],"names":[],"mappings":"AAAA,sBACE,YAAa,CACb,sBAAuB,CACvB,eAAgB,CAChB,kCACF","file":"4.608015e4.chunk.css","sourcesContent":[".grand-prix-container {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin-top: 20px;\r\n  background-color: var(--main-color);\r\n}"]}
