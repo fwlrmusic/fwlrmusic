@@ -26,7 +26,7 @@ const Navbar = () => {
   useEffect(() => {
     const grandPrix = grandPrixRef.current
     if (isGrandPrixOpen) {
-      grandPrix.style.height = '183px'
+      grandPrix.style.height = '182px'
     } else {
       grandPrix.style.height = '60px'
     }

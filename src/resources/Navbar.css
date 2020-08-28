@@ -134,6 +134,10 @@ nav {
   border-bottom-width: 0;
 }
 
+.large-menu .sub-menu:hover .sub-menu-item:nth-child(2) {
+  border-bottom-width: 1px;
+}
+
 .large-menu .sub-menu-items {
   border-top: 1px solid var(--main-border);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
