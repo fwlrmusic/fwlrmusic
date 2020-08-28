@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './resources/Navbar.css'
 import { CgMenuRightAlt } from 'react-icons/cg'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+  const grandPrixRef = useRef(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isGrandPrixOpen, setIsGrandPrixOpen] = useState(false)
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -17,36 +19,66 @@ const Navbar = () => {
     }
   })
 
+  useEffect(() => {
+    const grandPrix = grandPrixRef.current
+    if (isGrandPrixOpen) {
+      grandPrix.style.height = '183px'
+    } else {
+      grandPrix.style.height = '60px'
+    }
+  }, [isGrandPrixOpen])
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const toggleGrandPrix = () => {
+    setIsGrandPrixOpen(!isGrandPrixOpen)
   }
 
   const closeMenu = () => {
     if (isMenuOpen) {
       setIsMenuOpen(false)
+      setIsGrandPrixOpen(false)
     }
   }
 
   const menuItems = (
-    <ul>
-      <li>
-        <Link to='/' title='Home page' className='menu-item'>
-            Home
+    <ul className='menu-items'>
+      <li className='menu-item'>
+        <Link to='/' title='Home page' className='menu-item-link'>
+          Home
         </Link>
       </li>
-      <li>
-        <Link to='/grand-prix' title='Grand Prix' className='menu-item'>
-            FWLR Grand Prix
+      <div ref={grandPrixRef} className='sub-menu' onClick={toggleGrandPrix}>
+        <span>
+          FWLR Grand Prix
+        </span>
+        {
+          isGrandPrixOpen && (
+            <ul className='sub-menu-items'>
+              <li className='sub-menu-item'>
+                <Link to='/races-and-winners' title='Races and winners' className='menu-item-link'>
+                  Races & Winners
+                </Link>
+              </li>
+              <li className='sub-menu-item'>
+                <Link to='/how-to-race' title='How to race' className='menu-item-link'>
+                  How to Race
+                </Link>
+              </li>
+            </ul>
+          )
+        }
+      </div>
+      <li className='menu-item'>
+        <Link to='/pit-crew' title='Pit Crew' className='menu-item-link'>
+          Pit Crew
         </Link>
       </li>
-      <li>
-        <Link to='/pit-crew' title='Pit Crew' className='menu-item'>
-            Pit Crew
-        </Link>
-      </li>
-      <li>
-        <Link to='/contact' title='Contact' className='menu-item'>
-            Contact
+      <li className='menu-item'>
+        <Link to='/contact' title='Contact' className='menu-item-link'>
+          Contact
         </Link>
       </li>
     </ul>

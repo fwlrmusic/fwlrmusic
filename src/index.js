@@ -9,7 +9,8 @@ import {
 import Navbar from './Navbar'
 import LoadingSpinner from './LoadingSpinner'
 
-const GrandPrix = React.lazy(() => import('./GrandPrix'))
+const HowToRace = React.lazy(() => import('./HowToRace'))
+const RacesAndWinners = React.lazy(() => import('./RacesAndWinners'))
 const PitCrew = React.lazy(() => import('./PitCrew'))
 const Contact = React.lazy(() => import('./Contact'))
 const Landing = React.lazy(() => import('./Landing'))
@@ -21,9 +22,14 @@ function App () {
         <Navbar />
         <div className='page-content'>
           <Switch>
-            <Route path='/grand-prix'>
+            <Route path='/how-to-race'>
               <Suspense fallback={<LoadingSpinner />}>
-                <GrandPrix />
+                <HowToRace />
+              </Suspense>
+            </Route>
+            <Route path='/races-and-winners'>
+              <Suspense fallback={<LoadingSpinner />}>
+                <RacesAndWinners />
               </Suspense>
             </Route>
             <Route path='/pit-crew'>
