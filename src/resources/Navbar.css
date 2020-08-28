@@ -72,8 +72,24 @@ nav {
   margin-top: 60px;
 }
 
-.burger-menu .sub-menu-item {
+.burger-menu .sub-menu {
   border-top: 1px solid var(--main-border);
+}
+
+.burger-menu .sub-menu-item {
+  border-top: 1px solid var(--main-active);
+  height: 60px;
+  padding: 0px 20px;
+  background-color: var(--main-border);
+  font-size: 0.75rem;
+}
+
+.burger-menu .sub-menu-item:active {
+  background-color: var(--main-active);
+}
+
+.burger-menu span {
+  padding: 0px 20px;
 }
 
 .burger-menu span, .large-menu span {
@@ -93,8 +109,6 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--main-color);
-  border-left: 1px solid var(--main-border);
-  padding: 0px 20px;
   cursor: pointer;
 }
 
@@ -106,6 +120,8 @@ nav {
 
 .large-menu .sub-menu {
   margin-right: -1px;
+  border-left: 1px solid var(--main-border);
+  padding: 0px 20px;
 }
 
 .large-menu .sub-menu:hover {

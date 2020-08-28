@@ -11,9 +11,13 @@ const Navbar = () => {
   useEffect(() => {
     if (isMenuOpen) {
       const menuItems = Array.from(document.getElementsByClassName('menu-item'))
-      if (menuItems) {
+      const subMenuItems = Array.from(document.getElementsByClassName('sub-menu-item'))
+      if (menuItems && subMenuItems) {
         menuItems.forEach(menuItem => {
           menuItem.addEventListener('click', closeMenu)
+        })
+        subMenuItems.forEach(subMenuItem => {
+          subMenuItem.addEventListener('click', closeMenu)
         })
       }
     }
