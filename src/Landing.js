@@ -21,7 +21,7 @@ const Landing = () => {
         />
       </div>
       <div className='landing-logo'>
-        <img src='https://res.cloudinary.com/dtweazqf2/image/upload/h_220,f_auto,q_auto,c_fit/v1598539128/Original_FWLR_Logo_htth7t.png' alt='Fowler logo' />
+        <img src='https://res.cloudinary.com/dtweazqf2/image/upload/h_220,f_auto,q_auto,c_fit/v1598717124/Original_FWLR_Logo_o4poxg.png' alt='Fowler logo' />
       </div>
       <SocialLinks />
     </div>

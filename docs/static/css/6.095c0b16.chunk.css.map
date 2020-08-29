@@ -1,1 +1,0 @@
-{"version":3,"sources":["HowToRace.css"],"names":[],"mappings":"AAAA,uBACE,YAAa,CACb,sBAAuB,CACvB,eAAgB,CAChB,kCACF","file":"6.095c0b16.chunk.css","sourcesContent":[".how-to-race-container {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin-top: 20px;\r\n  background-color: var(--main-color);\r\n}"]}

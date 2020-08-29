@@ -9,8 +9,7 @@ const HowToRace = () => {
     <div className='how-to-race-container'>
       <h1>How to Race</h1>
       <iframe
-        width='560'
-        height='315'
+        title='How to Race Introduction'
         src='https://www.youtube.com/embed/OZVEpBnRjKw'
         frameborder='0'
         allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'

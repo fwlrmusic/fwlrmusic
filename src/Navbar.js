@@ -93,7 +93,7 @@ const Navbar = () => {
       <div className='burger-menu'>
         <Link to='/' onClick={closeMenu}>
           <img
-            src='https://res.cloudinary.com/dtweazqf2/image/upload/h_40,f_auto,q_auto/v1598272317/Original_FWLR_Logo_htth7t.png'
+            src='https://res.cloudinary.com/dtweazqf2/image/upload/h_40,f_auto,q_auto/v1598717124/Original_FWLR_Logo_o4poxg.png'
             alt='Fowler logo'
             onClick={closeMenu}
           />
