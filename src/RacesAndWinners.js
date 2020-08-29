@@ -1,5 +1,6 @@
 import React from 'react'
 import './resources/RacesAndWinners.css'
+import SocialLinks from './SocialLinks'
 
 const RacesAndWinners = () => {
   return (
@@ -124,6 +125,7 @@ const RacesAndWinners = () => {
             </a>
           </div>
         </div>
+        <SocialLinks />
       </div>
     </div>
   )
