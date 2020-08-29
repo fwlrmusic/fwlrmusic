@@ -65,6 +65,14 @@
   background-color: var(--main-border);
 }
 
+.how-we-win-container a:hover {
+  background-color: var(--main-active);
+}
+
+.how-we-win-container a:active {
+  background-color: var(--main-color);
+}
+
 .races-and-winners p {
   display: flex;
   align-self: center;
