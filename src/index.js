@@ -17,17 +17,22 @@ const Landing = React.lazy(() => import('./Landing'))
 
 function App () {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className='App'>
         <Navbar />
         <div className='page-content'>
           <Switch>
-            <Route path={process.env.PUBLIC_URL + '/how-to-race'}>
+            <Route exact path='/'>
+              <Suspense fallback={<LoadingSpinner />}>
+                <Landing />
+              </Suspense>
+            </Route>
+            <Route path='/how-to-race'>
               <Suspense fallback={<LoadingSpinner />}>
                 <HowToRace />
               </Suspense>
             </Route>
-            <Route path={process.env.PUBLIC_URL + '/races-and-winners'}>
+            <Route path='/races-and-winners'>
               <Suspense fallback={<LoadingSpinner />}>
                 <RacesAndWinners />
               </Suspense>
@@ -38,14 +43,9 @@ function App () {
                 <PitCrew />
               </Suspense>
             </Route> */}
-            <Route path={process.env.PUBLIC_URL + '/contact'}>
+            <Route path='/contact'>
               <Suspense fallback={<LoadingSpinner />}>
                 <Contact />
-              </Suspense>
-            </Route>
-            <Route path={process.env.PUBLIC_URL + '/'}>
-              <Suspense fallback={<LoadingSpinner />}>
-                <Landing />
               </Suspense>
             </Route>
           </Switch>
