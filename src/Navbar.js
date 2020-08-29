@@ -50,7 +50,7 @@ const Navbar = () => {
   const menuItems = (
     <ul className='menu-items'>
       <li className='menu-item'>
-        <Link to='/' title='Home page' className='menu-item-link'>
+        <Link to={process.env.PUBLIC_URL + '/'} title='Home page' className='menu-item-link'>
           Home
         </Link>
       </li>
@@ -62,12 +62,12 @@ const Navbar = () => {
           isGrandPrixOpen && (
             <ul className='sub-menu-items'>
               <li className='sub-menu-item'>
-                <Link to='/races-and-winners' title='Races and winners' className='menu-item-link'>
+                <Link to={process.env.PUBLIC_URL + '/races-and-winners'} title='Races and winners' className='menu-item-link'>
                   Races & Winners
                 </Link>
               </li>
               <li className='sub-menu-item'>
-                <Link to='/how-to-race' title='How to race' className='menu-item-link'>
+                <Link to={process.env.PUBLIC_URL + '/how-to-race'} title='How to race' className='menu-item-link'>
                   How to Race
                 </Link>
               </li>
@@ -82,7 +82,7 @@ const Navbar = () => {
         </Link>
       </li> */}
       <li className='menu-item'>
-        <Link to='/contact' title='Contact' className='menu-item-link'>
+        <Link to={process.env.PUBLIC_URL + '/contact'} title='Contact' className='menu-item-link'>
           Contact
         </Link>
       </li>
@@ -91,7 +91,7 @@ const Navbar = () => {
   const burgerMenu = () => {
     return (
       <div className='burger-menu'>
-        <Link to='/' onClick={closeMenu}>
+        <Link to={process.env.PUBLIC_URL + '/'} onClick={closeMenu}>
           <img
             src='https://res.cloudinary.com/dtweazqf2/image/upload/h_40,f_auto,q_auto/v1598272317/Original_FWLR_Logo_htth7t.png'
             alt='Fowler logo'
