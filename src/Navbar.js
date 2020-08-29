@@ -75,11 +75,12 @@ const Navbar = () => {
           )
         }
       </div>
-      <li className='menu-item'>
+      {/* TODO: Include in later release */}
+      {/* <li className='menu-item'>
         <Link to='/pit-crew' title='Pit Crew' className='menu-item-link'>
           Pit Crew
         </Link>
-      </li>
+      </li> */}
       <li className='menu-item'>
         <Link to='/contact' title='Contact' className='menu-item-link'>
           Contact
@@ -92,7 +93,7 @@ const Navbar = () => {
       <div className='burger-menu'>
         <Link to='/' onClick={closeMenu}>
           <img
-            src='https://res.cloudinary.com/dtweazqf2/image/upload/h_40,f_auto,q_auto/v1598272317/fwlr_logo_e7lfmo.png'
+            src='https://res.cloudinary.com/dtweazqf2/image/upload/h_40,f_auto,q_auto/v1598272317/Original_FWLR_Logo_htth7t.png'
             alt='Fowler logo'
             onClick={closeMenu}
           />

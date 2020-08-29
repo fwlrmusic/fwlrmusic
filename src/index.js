@@ -11,7 +11,7 @@ import LoadingSpinner from './LoadingSpinner'
 
 const HowToRace = React.lazy(() => import('./HowToRace'))
 const RacesAndWinners = React.lazy(() => import('./RacesAndWinners'))
-const PitCrew = React.lazy(() => import('./PitCrew'))
+// const PitCrew = React.lazy(() => import('./PitCrew')) // TODO: Include in later release
 const Contact = React.lazy(() => import('./Contact'))
 const Landing = React.lazy(() => import('./Landing'))
 
@@ -32,11 +32,12 @@ function App () {
                 <RacesAndWinners />
               </Suspense>
             </Route>
-            <Route path='/pit-crew'>
+            {/* TODO: Include in later release */}
+            {/* <Route path='/pit-crew'>
               <Suspense fallback={<LoadingSpinner />}>
                 <PitCrew />
               </Suspense>
-            </Route>
+            </Route> */}
             <Route path='/contact'>
               <Suspense fallback={<LoadingSpinner />}>
                 <Contact />
