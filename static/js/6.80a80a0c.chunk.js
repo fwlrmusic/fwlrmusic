@@ -1,2 +1,0 @@
-(this["webpackJsonpfwlr-app"]=this["webpackJsonpfwlr-app"]||[]).push([[6],{38:function(a,e,t){},42:function(a,e,t){"use strict";t.r(e);var n=t(1),c=t.n(n);t(38);e.default=function(){return c.a.createElement("div",{className:"how-to-race-container"},"[ How to race page ]")}}}]);
-//# sourceMappingURL=6.80a80a0c.chunk.js.map
