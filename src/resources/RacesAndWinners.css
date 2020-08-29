@@ -1,7 +1,6 @@
-.contact-container {
+.races-and-winners-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   margin-top: 20px;
   background-color: var(--main-color);
 }

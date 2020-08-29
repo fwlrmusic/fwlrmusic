@@ -15,60 +15,10 @@
   font-family: 'Orbitron';
   font-style: normal;
   font-weight: 400;
-  src: url('./Orbitron/Orbitron-Regular.ttf');
+  src: url('./Orbitron-Regular.ttf');
   src: local(''),
-       url('./Orbitron/Orbitron-Regular.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./Orbitron/Orbitron-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-/* orbitron-500 - latin */
-@font-face {
-  font-family: 'Orbitron';
-  font-style: normal;
-  font-weight: 500;
-  src: url('./Orbitron/Orbitron-Medium.ttf');
-  src: local(''),
-       url('./Orbitron/Orbitron-Medium.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./Orbitron/Orbitron-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-/* orbitron-600 - latin */
-@font-face {
-  font-family: 'Orbitron';
-  font-style: normal;
-  font-weight: 600;
-  src: url('./Orbitron/Orbitron-SemiBold.ttf');
-  src: local(''),
-       url('./Orbitron/Orbitron-SemiBold.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./Orbitron/Orbitron-SemiBold.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-/* orbitron-700 - latin */
-@font-face {
-  font-family: 'Orbitron';
-  font-style: normal;
-  font-weight: 700;
-  src: url('./Orbitron/Orbitron-Bold.ttf');
-  src: local(''),
-       url('./Orbitron/Orbitron-Bold.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./Orbitron/Orbitron-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-/* orbitron-800 - latin */
-@font-face {
-  font-family: 'Orbitron';
-  font-style: normal;
-  font-weight: 800;
-  src: url('./Orbitron/Orbitron-ExtraBold.ttf');
-  src: local(''),
-       url('./Orbitron/Orbitron-ExtraBold.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./Orbitron/Orbitron-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-/* orbitron-900 - latin */
-@font-face {
-  font-family: 'Orbitron';
-  font-style: normal;
-  font-weight: 900;
-  src: url('./Orbitron/Orbitron-Black.ttf');
-  src: local(''),
-       url('./Orbitron/Orbitron-Black.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./Orbitron/Orbitron-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./Orbitron-Regular.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./Orbitron-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 nav, h1, h2, h3, h4, h5, h6 {
