@@ -9,11 +9,11 @@ import {
 import Navbar from './Navbar'
 import LoadingSpinner from './LoadingSpinner'
 
-const HowToRace = React.lazy(() => import('./HowToRace'))
-const RacesAndWinners = React.lazy(() => import('./RacesAndWinners'))
-// const PitCrew = React.lazy(() => import('./PitCrew')) // TODO: Include in later release
-const Contact = React.lazy(() => import('./Contact'))
-const Landing = React.lazy(() => import('./Landing'))
+const HowToRace = React.lazy(() => import('./howToRace'))
+const RacesAndWinners = React.lazy(() => import('./racesAndWinners'))
+// const PitCrew = React.lazy(() => import('./pitCrew')) // TODO: Include in later release
+const Contact = React.lazy(() => import('./contact'))
+const Landing = React.lazy(() => import('./landing'))
 
 function App () {
   return (
