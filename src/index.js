@@ -22,12 +22,12 @@ function App () {
         <Navbar />
         <div className='page-content'>
           <Switch>
-            <Route path='/how-to-race'>
+            <Route path={process.env.PUBLIC_URL + '/how-to-race'}>
               <Suspense fallback={<LoadingSpinner />}>
                 <HowToRace />
               </Suspense>
             </Route>
-            <Route path='/races-and-winners'>
+            <Route path={process.env.PUBLIC_URL + '/races-and-winners'}>
               <Suspense fallback={<LoadingSpinner />}>
                 <RacesAndWinners />
               </Suspense>
@@ -38,12 +38,12 @@ function App () {
                 <PitCrew />
               </Suspense>
             </Route> */}
-            <Route path='/contact'>
+            <Route path={process.env.PUBLIC_URL + '/contact'}>
               <Suspense fallback={<LoadingSpinner />}>
                 <Contact />
               </Suspense>
             </Route>
-            <Route path='/'>
+            <Route path={process.env.PUBLIC_URL + '/'}>
               <Suspense fallback={<LoadingSpinner />}>
                 <Landing />
               </Suspense>
