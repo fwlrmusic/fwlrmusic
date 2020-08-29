@@ -16,6 +16,10 @@
   margin-bottom: 20px;
 }
 
+.how-to-race-container p {
+  padding: 0 5px
+}
+
 .how-to-race-container h1 {
   font-size: 24px;
 }
@@ -44,5 +48,9 @@
 
   .how-to-race-container h1 {
     font-size: 32px;
+  }
+
+  .how-to-race-container p {
+    padding: 0;
   }
 }
