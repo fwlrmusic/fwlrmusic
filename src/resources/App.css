@@ -21,8 +21,19 @@
        url('./Orbitron-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./Raleway-Regular.ttf');
+  src: local(''),
+       url('./Raleway-Regular.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./Raleway-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
 nav, h1, h2, h3, h4, h5, h6 {
   font-family: Orbitron, sans-serif;
+  letter-spacing: 3px;
 }
 
 .App {
@@ -38,4 +49,5 @@ nav, h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 60px;
   background-color: var(--main-color);
+  font-family: Raleway, sans-serif;
 }
