@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import './resources/Navbar.css'
 import { CgMenuRightAlt } from 'react-icons/cg'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-  const grandPrixRef = useRef(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isGrandPrixOpen, setIsGrandPrixOpen] = useState(false)
 
@@ -24,12 +23,10 @@ const Navbar = () => {
   })
 
   useEffect(() => {
-    const grandPrix = grandPrixRef.current
-    if (isGrandPrixOpen) {
-      grandPrix.style.height = '182px'
-    } else {
-      grandPrix.style.height = '60px'
-    }
+    const grandPrixMenus = Array.from(document.getElementsByClassName('sub-menu'))
+    grandPrixMenus.forEach(subMenu => {
+      subMenu.style.height = isGrandPrixOpen ? '182px' : '60px'
+    })
   }, [isGrandPrixOpen])
 
   const toggleMenu = () => {
@@ -54,7 +51,7 @@ const Navbar = () => {
           Home
         </Link>
       </li>
-      <div ref={grandPrixRef} className='sub-menu' onClick={toggleGrandPrix}>
+      <div className='sub-menu' onClick={toggleGrandPrix}>
         <span>
           FWLR Grand Prix
         </span>
