@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import './resources/App.css'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from 'react-router-dom'
@@ -17,7 +17,7 @@ const Landing = React.lazy(() => import('./Landing'))
 
 function App () {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename='/'>
       <div className='App'>
         <Navbar />
         <div className='page-content'>
