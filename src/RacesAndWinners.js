@@ -27,7 +27,7 @@ const RacesAndWinners = () => {
           <p className='winner'>Winner: Mason Scanlon (July 4th, 2020)</p>
           <div className='how-we-win-container'>
             <a
-              href='https://3621bc17-7f74-4355-9485-f98feeb15fb0.filesusr.com/ugd/663e19_cb4c409bd5394a5bb8ad5e35615c1761.pdf'
+              href='https://drive.google.com/file/d/1_jF-sGsWDPsIuGvhuPMt4hsN6yA4Fj22/view?usp=sharing'
               title='Race #4 solution'
               target='_blank'
               rel='noopener noreferrer nofollow'
@@ -57,7 +57,7 @@ const RacesAndWinners = () => {
           <p className='winner'>Winner: RVRS (May 16th, 2020)</p>
           <div className='how-we-win-container'>
             <a
-              href='https://3621bc17-7f74-4355-9485-f98feeb15fb0.filesusr.com/ugd/663e19_cb0ea6b7c5324f87b0f035bb62d2fb52.pdf'
+              href='https://drive.google.com/file/d/1lVCWN2PpSuF_JwoAJzlxHzzWzyXO5zUc/view?usp=sharing'
               title='Race #3 solution'
               target='_blank'
               rel='noopener noreferrer nofollow'
@@ -88,7 +88,7 @@ const RacesAndWinners = () => {
           <p className='winner'>2nd Place: RVRS (April 11th, 2020)</p>
           <div className='how-we-win-container'>
             <a
-              href='https://3621bc17-7f74-4355-9485-f98feeb15fb0.filesusr.com/ugd/663e19_7c837a3954914e4eb518e89495699936.pdf'
+              href='https://drive.google.com/file/d/1v1vZV_fyizSRF434v7gGGPshEo9vxDkk/view?usp=sharing'
               title='Race #2 solution'
               target='_blank'
               rel='noopener noreferrer nofollow'
@@ -116,7 +116,7 @@ const RacesAndWinners = () => {
           <p className='winner'>Winner: Kyle Yalch (March 12th, 2020)</p>
           <div className='how-we-win-container'>
             <a
-              href='https://3621bc17-7f74-4355-9485-f98feeb15fb0.filesusr.com/ugd/663e19_84e577310f254e76a4a1dad4bd8fb00e.pdf'
+              href='https://drive.google.com/file/d/1cuS07MySLMHb-6oNZXOVfMsxpGLzwSua/view?usp=sharing'
               title='Race #1 solution'
               target='_blank'
               rel='noopener noreferrer nofollow'
