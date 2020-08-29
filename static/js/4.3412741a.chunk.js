@@ -1,2 +1,0 @@
-(this["webpackJsonpfwlr-app"]=this["webpackJsonpfwlr-app"]||[]).push([[4],{34:function(n,a,r){},40:function(n,a,r){"use strict";r.r(a);var e=r(1),t=r.n(e);r(34);a.default=function(){return t.a.createElement("div",{className:"grand-prix-container"},"[ Grand Prix Page ]")}}}]);
-//# sourceMappingURL=4.3412741a.chunk.js.map
