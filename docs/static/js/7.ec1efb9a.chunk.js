@@ -1,2 +1,0 @@
-(this["webpackJsonpfwlr-app"]=this["webpackJsonpfwlr-app"]||[]).push([[7],{39:function(n,a,e){},43:function(n,a,e){"use strict";e.r(a);var s=e(1),r=e.n(s);e(39);a.default=function(){return r.a.createElement("div",{className:"races-and-winners-container"},"[ Races and winners page ]")}}}]);
-//# sourceMappingURL=7.ec1efb9a.chunk.js.map

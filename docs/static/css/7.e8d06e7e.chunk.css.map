@@ -1,1 +1,0 @@
-{"version":3,"sources":["RacesAndWinners.css"],"names":[],"mappings":"AAAA,6BACE,YAAa,CACb,sBAAuB,CACvB,eAAgB,CAChB,kCACF","file":"7.e8d06e7e.chunk.css","sourcesContent":[".races-and-winners-container {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin-top: 20px;\r\n  background-color: var(--main-color);\r\n}"]}
