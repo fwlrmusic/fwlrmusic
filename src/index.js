@@ -14,6 +14,7 @@ const RacesAndWinners = React.lazy(() => import('./RacesAndWinners'))
 // const PitCrew = React.lazy(() => import('./PitCrew')) // TODO: Include in later release
 const Contact = React.lazy(() => import('./Contact'))
 const Landing = React.lazy(() => import('./Landing'))
+const CodeValidator = React.lazy(() => import('./CodeValidator'))
 
 function App () {
   return (
@@ -35,6 +36,11 @@ function App () {
             <Route path='/races-and-winners'>
               <Suspense fallback={<LoadingSpinner />}>
                 <RacesAndWinners />
+              </Suspense>
+            </Route>
+            <Route path='/code-validator'>
+              <Suspense fallback={<LoadingSpinner />}>
+                <CodeValidator />
               </Suspense>
             </Route>
             {/* TODO: Include in later release */}
