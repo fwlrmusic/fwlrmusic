@@ -37,13 +37,10 @@ const Contact = () => {
       const data = JSON.stringify({ name: personName, email: personEmail, message: personMessage })
       fetch('https://formspree.io/xzbjlvnj', {
         method: 'POST',
-        mode: 'no-cors',
         body: data,
         headers: {
           'Content-Type': 'application/json'
-        },
-        redirect: 'follow',
-        referrerPolicy: 'no-referrer'
+        }
       }).then((response, err) => {
         console.log('fetch fired')
         console.log('response: ', response)
