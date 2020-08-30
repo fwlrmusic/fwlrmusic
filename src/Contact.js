@@ -35,12 +35,11 @@ const Contact = () => {
       //
       e.preventDefault()
       const data = JSON.stringify({ name: personName, email: personEmail, message: personMessage })
-      fetch('https://mail.google.com/mail/u/fwlrdev@gmail.com', {
+      fetch('https://formspree.io/xzbjlvnj', {
         method: 'POST',
         mode: 'no-cors',
         body: data,
         headers: {
-          API_key: 'AIzaSyA3RSBiQoyzHGwHkodM8Ngybb3I5YRvA8w',
           'Content-Type': 'application/json'
         },
         redirect: 'follow',
