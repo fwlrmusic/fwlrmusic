@@ -37,10 +37,8 @@ const Contact = () => {
       const data = JSON.stringify({ name: personName, email: personEmail, message: personMessage })
       fetch('https://mail.google.com/mail/u/fwlrdev@gmail.com', {
         method: 'POST',
-        mode: 'cors',
+        mode: 'no-cors',
         body: data,
-        cache: 'default',
-        credentials: 'same-origin',
         headers: {
           'Content-Type': 'application/json'
         },
