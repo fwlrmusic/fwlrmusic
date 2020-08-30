@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react'
 import './resources/Contact.css'
 import SocialLinks from './SocialLinks'
-const nodemailer = require('nodemailer')
 
 const Contact = () => {
   const formRef = useRef(null)
@@ -33,25 +32,29 @@ const Contact = () => {
     const contactForm = formRef.current
     if (contactForm.checkValidity()) {
       setIsDisabled(true)
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: process.env.EMAIL,
-          pass: process.env.PASSWORD
-        }
-      })
-      const composedEmail = {
-        from: process.env.EMAIL,
-        to: process.env.EMAIL,
-        subject: 'New Contact Message from your FWLR Music React App: ' + personName + ' - ' + personEmail,
-        text: personMessage
-      }
-      transporter.sendMail(composedEmail, (err, data) => {
-        if (err) {
-          console.error(err)
-        } else {
+      //
+      e.preventDefault()
+      const data = JSON.stringify({ name: personName, email: personEmail, message: personMessage })
+      fetch('https://mail.google.com/mail/u/fwlrdev@gmail.com', {
+        method: 'POST',
+        mode: 'cors',
+        body: data,
+        cache: 'default',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer'
+      }).then((response, err) => {
+        console.log('fetch fired')
+        console.log('response: ', response)
+        if (response.ok) {
           console.log('Your contact message has been sent')
           setIsDisabled(false)
+        }
+        if (err) {
+          console.error(err)
         }
       })
       //
