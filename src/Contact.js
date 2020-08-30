@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import './resources/Contact.css'
 import SocialLinks from './SocialLinks'
+const nodemailer = require('nodemailer')
 
 const Contact = () => {
   const formRef = useRef(null)
@@ -8,6 +9,7 @@ const Contact = () => {
   const [personEmail, setEmail] = useState('')
   const [personMessage, setMessage] = useState('')
   const [inputError, setInputError] = useState(false)
+  const [isDisabled, setIsDisabled] = useState(false)
   //
   const updateValue = e => {
     e.preventDefault()
@@ -26,10 +28,34 @@ const Contact = () => {
     }
   }
 
-  const sendEmail = () => {
+  const sendEmail = e => {
+    e.preventDefault()
     const contactForm = formRef.current
     if (contactForm.checkValidity()) {
-      // send email
+      setIsDisabled(true)
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.EMAIL,
+          pass: process.env.PASSWORD
+        }
+      })
+      const composedEmail = {
+        from: process.env.EMAIL,
+        to: process.env.EMAIL,
+        subject: 'New Contact Message from your FWLR Music React App: ' + personName + ' - ' + personEmail,
+        text: personMessage
+      }
+      transporter.sendMail(composedEmail, (err, data) => {
+        if (err) {
+          console.error(err)
+        } else {
+          console.log('Your contact message has been sent')
+          setIsDisabled(false)
+        }
+      })
+      //
+      // If user previously triggered an invalid input but has now reached this validated location:
       if (inputError) {
         setInputError(false)
       }
@@ -71,6 +97,7 @@ const Contact = () => {
             <input
               type='submit'
               value='Submit'
+              disabled={isDisabled}
             />
           </div>
         </form>
