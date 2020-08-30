@@ -42,8 +42,6 @@ const Contact = () => {
           'Content-Type': 'application/json'
         }
       }).then((response, err) => {
-        console.log('fetch fired')
-        console.log('response: ', response)
         if (response.ok) {
           console.log('Your contact message has been sent')
           setIsDisabled(false)
