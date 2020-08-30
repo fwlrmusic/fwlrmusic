@@ -40,6 +40,7 @@ const Contact = () => {
         mode: 'no-cors',
         body: data,
         headers: {
+          API_key: 'AIzaSyA3RSBiQoyzHGwHkodM8Ngybb3I5YRvA8w',
           'Content-Type': 'application/json'
         },
         redirect: 'follow',
