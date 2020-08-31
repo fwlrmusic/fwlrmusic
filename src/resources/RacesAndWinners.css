@@ -61,7 +61,7 @@
   padding: 10px 50px;
   text-align: center;
   text-decoration: none;
-  color: var(--main-text-color);
+  color: var(--main-text);
   background-color: var(--main-border);
 }
 

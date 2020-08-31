@@ -8,6 +8,7 @@ const Contact = () => {
   const [personEmail, setEmail] = useState('')
   const [personMessage, setMessage] = useState('')
   const [inputError, setInputError] = useState(false)
+  const [messageSent, setMessageSent] = useState(false)
   const [isDisabled, setIsDisabled] = useState(false)
   //
   const updateValue = e => {
@@ -32,6 +33,9 @@ const Contact = () => {
     const contactForm = formRef.current
     if (contactForm.checkValidity()) {
       setIsDisabled(true)
+      if (inputError) {
+        setInputError(false)
+      }
       //
       e.preventDefault()
       const data = JSON.stringify({ name: personName, email: personEmail, message: personMessage })
@@ -45,16 +49,12 @@ const Contact = () => {
         if (response.ok) {
           console.log('Your contact message has been sent')
           setIsDisabled(false)
+          setMessageSent(true)
         }
         if (err) {
           console.error(err)
         }
       })
-      //
-      // If user previously triggered an invalid input but has now reached this validated location:
-      if (inputError) {
-        setInputError(false)
-      }
     } else {
       setInputError(true)
     }
@@ -100,6 +100,11 @@ const Contact = () => {
         {
           inputError && (
             <p className='input-error'>Please fill out all fields in the format required</p>
+          )
+        }
+        {
+          messageSent && (
+            <p className='message-sent'>Your message has been sent successfully</p>
           )
         }
         <SocialLinks />

@@ -25,7 +25,7 @@ const Navbar = () => {
   useEffect(() => {
     const grandPrixMenus = Array.from(document.getElementsByClassName('sub-menu'))
     grandPrixMenus.forEach(subMenu => {
-      subMenu.style.height = isGrandPrixOpen ? '182px' : '60px'
+      subMenu.style.height = isGrandPrixOpen ? '243px' : '60px'
     })
   }, [isGrandPrixOpen])
 
@@ -66,6 +66,11 @@ const Navbar = () => {
               <li className='sub-menu-item'>
                 <Link to='/how-to-race' title='How to race' className='menu-item-link'>
                   How to Race
+                </Link>
+              </li>
+              <li className='sub-menu-item'>
+                <Link to='/code-validator' title='Code validator' className='menu-item-link'>
+                  Code Validator
                 </Link>
               </li>
             </ul>
