@@ -2,7 +2,14 @@
   "name": "fwlr-app",
   "version": "0.1.0",
   "private": false,
-  "proxy": "http://localhost:5000",
+  "proxy": {
+    "/": {
+      "target": "http://localhost:5000"
+    },
+    "/database/*": {
+      "target": "http://localhost:5000"
+    }
+  },
   "homepage": "https://fwlrmusic.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
