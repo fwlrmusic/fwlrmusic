@@ -18,16 +18,17 @@ const CodeValidator = () => {
         'Content-Type': 'application/json'
       }
     })
-    return response // response.json()
+    return response.text()
   }
 
   const queryDatabase = async e => {
     e.preventDefault()
-    setIsDisabled(true)
-    const input = inputRef.current
-    const codeReturn = codeReturnRef.current
     let inputValue
     let secretAnswer
+    const input = inputRef.current
+    const codeReturn = codeReturnRef.current
+    codeReturn.textContent = ''
+    setIsDisabled(true)
     if (input && codeReturn) {
       setIsValidating(true)
       inputValue = input.value
