@@ -31,6 +31,9 @@
   padding: 5px 10px;
   border: none;
   border-radius: 0.25rem;
+  font-family: Orbitron;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .code-return {
@@ -38,8 +41,8 @@
   justify-content: center;
   height: 40px;
   font-family: Orbitron;
-  letter-spacing: 1px;
   font-size: 12px;
+  letter-spacing: 1px;
   color: var(--main-text);
   word-break: break-all;
   overflow-y: scroll;
