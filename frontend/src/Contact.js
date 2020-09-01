@@ -39,7 +39,7 @@ const Contact = () => {
       //
       e.preventDefault()
       const data = JSON.stringify({ name: personName, email: personEmail, message: personMessage })
-      fetch('https://formspree.io/xzbjlvnj', {
+      fetch('https://formspree.io/myynqlrk', {
         method: 'POST',
         body: data,
         headers: {
