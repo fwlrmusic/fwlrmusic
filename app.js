@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 5000
 const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
 const uri = 'mongodb+srv://fwlrGrandPrix:pra3XALmupChWaaJ@cluster0.1ok79.mongodb.net/fwlrgrandprix?retryWrites=true&w=majority'
 const client = new MongoClient(uri, { useNewUrlParser: true })
+const port = process.env.PORT || 5000
 
 client.connect(err => {
   console.log('Connected to database')
@@ -15,10 +15,6 @@ client.connect(err => {
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-
-app.get('/', (req, res) => {
-  res.send()
-})
 
 app.get('/database/:search', async (req, res) => {
   const search = req.params.search.replace(':', '')
@@ -37,13 +33,9 @@ app.get('/database/:search', async (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`FWLR app listening at http://localhost:${port}`)
+  console.log(`FWLR app listening at port ${port}`)
 })
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('build'))
-  const path = require('path')
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
-  })
 }
