@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import './resources/App.css'
 import {
-  BrowserRouter as Router, // NOTE: WILL NOT work on gh-pages without HashRouter!
+  HashRouter as Router,
   Switch,
   Route
 } from 'react-router-dom'

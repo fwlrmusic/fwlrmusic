@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const port = process.env.PORT || 5000
 const MongoClient = require('mongodb').MongoClient
 const uri = 'mongodb+srv://fwlrGrandPrix:pra3XALmupChWaaJ@cluster0.1ok79.mongodb.net/fwlrgrandprix?retryWrites=true&w=majority'
 const client = new MongoClient(uri, { useNewUrlParser: true })
-const port = process.env.PORT || 5000
 
 client.connect(err => {
   console.log('Connected to database')

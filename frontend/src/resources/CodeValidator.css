@@ -4,7 +4,7 @@
   align-items: center;
   margin-top: 20px;
   background-color: var(--main-color);
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .code-validator {
@@ -31,28 +31,37 @@
   padding: 5px 10px;
   border: none;
   border-radius: 0.25rem;
-  font-family: Orbitron;
   font-size: 12px;
-  letter-spacing: 1px;
 }
 
-.code-return {
+.code-return-container {
   display: flex;
-  justify-content: center;
-  height: 40px;
-  font-family: Orbitron;
+  flex-direction: column;
+  align-items: center;
+  height: 45px;
   font-size: 12px;
-  letter-spacing: 1px;
   color: var(--main-text);
-  word-break: break-all;
   overflow-y: scroll;
   padding: 0 10px;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
 
-.code-return::-webkit-scrollbar {
+.code-return-container::-webkit-scrollbar {
   display: none;
+}
+
+.secret-answer {
+  color: rgb(0,255,0);
+  height: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  word-break: break-all;
+}
+
+.code-return-container a {
+  cursor: pointer;
 }
 
 .submit-code {
