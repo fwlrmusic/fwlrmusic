@@ -39,15 +39,21 @@ const CodeValidator = () => {
     if (input) {
       setIsValidating(true)
       inputValue = input.value
-      runQuery()
-      secret = await runQuery(inputValue).catch(console.dir)
-      setIsValidating(false)
-      setIsDisabled(false)
-      if (secret) {
-        codeReturn.textContent = 'Validated! The secret answer is: '
-        codeReturn.style.color = 'rgb(0,255,0)'
-        setSecretAnswer(secret)
+      if (!inputValue.includes('http')) {
+        secret = await runQuery(inputValue).catch(console.dir)
+        setIsValidating(false)
+        setIsDisabled(false)
+        if (secret) {
+          codeReturn.textContent = 'Code Validated!'
+          codeReturn.style.color = 'rgb(0,255,0)'
+          setSecretAnswer(secret)
+        } else {
+          codeReturn.textContent = 'This code is invalid'
+          codeReturn.style.color = 'rgb(255,0,0)'
+        }
       } else {
+        setIsValidating(false)
+        setIsDisabled(false)
         codeReturn.textContent = 'This code is invalid'
         codeReturn.style.color = 'rgb(255,0,0)'
       }
@@ -74,7 +80,7 @@ const CodeValidator = () => {
           <p ref={codeReturnRef} className='code-return' />
           {
             (secretAnswer && secretAnswer.includes('http'))
-              ? <a href={secretAnswer} target='_blank' rel='noopener noreferrer nofollow' className='secret-answer'>{secretAnswer}</a>
+              ? <a href={secretAnswer} target='_blank' rel='noopener noreferrer nofollow' className='secret-answer'>Click here</a>
               : <p className='secret-answer'>{secretAnswer}</p>
           }
         </div>
